@@ -45,10 +45,55 @@ namespace Actividad4
             return (sum / x.Length);
         }
 
-        //public int calcMin(int[] x)
-        //{
-        //    ;
-        //}
+        public int calcMin(int[] x)
+        {
+            int minValue = x[0];
+            foreach(int element in x)
+            {
+                if(element < minValue) 
+                {
+                    minValue = element;
+                }
+                
+            }
+            return minValue;
+        }
+
+        public int calcMax(int[] x)
+        {
+            int maxValue = x[0];
+            foreach (int element in x)
+            {
+                if (maxValue < element)
+                {
+                    maxValue = element;
+                }
+
+            }
+            return maxValue;
+        }
+
+        public int[] sortArray(int[] x)
+        {
+            for (int pass = 0; pass < x.Length - 1; pass = pass + 1)
+            {
+                bool doneSwap = false;
+
+                for (int i = 0; i < x.Length - 1; i = i + 1)
+                {
+                    if (x[i] > x[i + 1])
+                    {
+                        int temp = x[i];
+                        x[i] = x[i + 1];
+                        x[i + 1] = temp;
+                        doneSwap = true;
+                    }
+                }
+                if (!doneSwap)
+                    break;
+            }
+            return x;
+        }
 
     }
 
