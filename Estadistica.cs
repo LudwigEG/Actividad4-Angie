@@ -95,6 +95,11 @@ namespace Actividad4
             return x;
         }
 
+        public float calcMediana(int[] x)
+        {
+            return (x[4] + x[5]) / 2;
+        }
+
     }
 
 

@@ -16,6 +16,7 @@ namespace Actividad4
             ob1.writeData(sortedArr);
             Console.WriteLine("El valor mínimo: " + ob1.calcMin(ob1.arreNum));
             Console.WriteLine("El valor máximo: " + ob1.calcMax(ob1.arreNum));
+            Console.WriteLine("La mediana es: " + ob1.calcMediana(sortedArr));
         }
     }
 }
